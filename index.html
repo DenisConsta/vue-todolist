@@ -42,24 +42,27 @@
           <img class="" src="assets/img/image(2).svg"></img>
 
           <div class="inputForm d-flex justify-content-between">
-            <input class="w-75" type="text" placeholder="Add a new task ...">
-            <a class="my-btn"><i class="fa-solid fa-plus"></i></a>
+            <input class="w-75" type="text" placeholder="Add a new task ..."
+            v-model.trim="inputText" @keyup.enter="addTask()">
+            <a class="my-btn" @click="addTask()"><i class="fa-solid fa-plus"></i></a>
           </div>
+          <h3 class="lead error text-center my-3" > {{errorString}} </h3>
         </div>
 
         <div class="col ">
           
+          <h3 class="p-5 text-light" v-if="tasks.length === 0">Complimenti hai completato tutti i tasks! </h3>
           <div class="tasksArea m-4 ">
-
-            <div class="task d-flex justify-content-between">
+            <div v-for="(task, i) in tasks" class="task d-flex justify-content-between" :class="{'done' : task.done}"
+            @click="task.done = !task.done">
               <div class="task-left">
-                <span class="quantity badge">3</span>
-                <span class="spanText mx-3">prova prova</span>
+                <span class="quantity badge"> {{task.quantity}} </span>
+                <span class="spanText mx-3"> {{task.text}} </span>
               </div>
               <div class="options">
-                <i class="fa-solid fa-minus mx-2"></i>
-                <i class="fa-solid fa-plus mx-2"></i>
-                <i class="fa-solid fa-xmark mx-2"></i>
+                <i v-if="task.quantity > 1" @click.stop="task.quantity--" class="fa-solid fa-minus mx-2"></i>
+                <i class="fa-solid fa-plus mx-2" @click.stop="task.quantity++"></i>
+                <i class="fa-solid fa-xmark mx-2" @click.stop="removeTask(i)"></i>
               </div>
             </div>
 

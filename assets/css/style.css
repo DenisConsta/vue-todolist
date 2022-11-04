@@ -61,4 +61,25 @@ input:focus {
   color: var(--color-text);
   padding: 20px;
   border-bottom: 1px solid var(--color-background);
+  cursor: pointer;
+}
+
+.task:hover{
+  background-color: lightgray;
+}
+
+.fa-solid{
+  cursor: pointer;
+}
+
+.options .fa-solid{
+  padding: 5px;
+}
+
+.error{
+  color: firebrick;
+}
+
+.task.done .spanText{
+  text-decoration: line-through;
 }
