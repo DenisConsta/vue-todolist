@@ -35,34 +35,41 @@
 
 <body>
 
-  <div id="app" class="fluid-container main-wrapper p-3">
-    <div class="logo text-center">
-      <img class="w-25" src="assets/img/boolean-logo.png" alt="">
-    </div>
+  <div id="app" class="fluid-container main-wrapper ">
+    <div class="container">
+      <div class="row">
+        <div class="col ">
+          <img class="" src="assets/img/image(2).svg"></img>
 
-    <!-- ? Input + Button -->
-    <div class="inputForm text-center">
-      <input type="text" placeholder="New Task" class="m-3">
-      <button class="my-btn">add</button>
-      <p class="error"> errore di prova </p>
-    </div>
-
-    <!-- ? Tasks -->
-    <div class="tasksArea container p-0">
-      <h3 class="text-center">Non ci sono tasks da completare</h3>
-      <ul class="p-0 m-0">
-        <li class="task">
-          <div class="left">
-            <i class="fa-solid fa-plus mx-1"></i>
-            <i class="fa-solid fa-minus mx-1"></i>
-            <span class="badge mx-3"> q </span>
-            <span class="spanText"> testo </span>
+          <div class="inputForm d-flex justify-content-between">
+            <input class="w-75" type="text" placeholder="Add a new task ...">
+            <a class="my-btn"><i class="fa-solid fa-plus"></i></a>
           </div>
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-      </ul>
-    </div>
+        </div>
 
+        <div class="col ">
+          
+          <div class="tasksArea m-4 ">
+
+            <div class="task d-flex justify-content-between">
+              <div class="task-left">
+                <span class="quantity badge">3</span>
+                <span class="spanText mx-3">prova prova</span>
+              </div>
+              <div class="options">
+                <i class="fa-solid fa-minus mx-2"></i>
+                <i class="fa-solid fa-plus mx-2"></i>
+                <i class="fa-solid fa-xmark mx-2"></i>
+              </div>
+            </div>
+
+            
+          </div>
+
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <script src="js/script.js"></script>
