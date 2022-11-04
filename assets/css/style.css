@@ -1,0 +1,70 @@
+
+.main-wrapper{
+  color: white;
+  background-color: #000500;
+  min-height: 100vh;
+}
+
+input{
+  border-radius: 2rem;
+  padding-left: 10px;
+  border: none;
+}
+
+input.focus{
+  background-color: #473BF0;
+}
+
+img{
+  filter: brightness(0) saturate(100%) invert(17%) sepia(92%) saturate(6353%) hue-rotate(248deg) brightness(100%) contrast(89%);
+}
+
+.my-btn{
+  background-color: #473BF0;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 2rem;
+  text-transform: capitalize;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #6665DD;
+  border-bottom: 1px solid #000500;
+  cursor: pointer;
+}
+
+.task:hover{
+  background-color: #9B9ECE;
+}
+
+ul{
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.task.done .spanText{
+  text-decoration: line-through;
+}
+
+.fa-xmark, .fa-plus{
+  cursor: pointer;
+  padding: 10px;
+}
+
+.fa-xmark:hover, .error{
+  color: red;
+}
+
+.fa-plus:hover, .fa-minus:hover{
+  color: blue;
+}
+
+.badge{
+  background-color: orange;
+  border-radius: 50%;
+}
