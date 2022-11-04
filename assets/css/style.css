@@ -2,6 +2,7 @@
   --color-text: #A6A2C6;
   --color-background: #171723;
   --color-secondary: #24273D;
+  --color-hover: #8d3884;
 }
 
 .main-wrapper {
@@ -44,7 +45,8 @@ input:focus {
 
 .my-btn:hover {
   border: 1px solid var(--color-secondary);
-  background-color: var(--color-text);
+  color: var(--color-secondary);
+  background-color: var(--color-hover);
 }
 
 .my-btn:hover .fa-plus {
@@ -65,7 +67,7 @@ input:focus {
 }
 
 .task:hover{
-  background-color: lightgray;
+  background-color: #303347;
 }
 
 .fa-solid{
@@ -74,6 +76,10 @@ input:focus {
 
 .options .fa-solid{
   padding: 5px;
+}
+
+.options .fa-solid:hover, .quantity{
+  color: var(--color-hover)
 }
 
 .error{

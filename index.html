@@ -56,7 +56,7 @@
             <div v-for="(task, i) in tasks" class="task d-flex justify-content-between" :class="{'done' : task.done}"
             @click="task.done = !task.done">
               <div class="task-left">
-                <span class="quantity badge"> {{task.quantity}} </span>
+                <span v-if="task.quantity > 1" class="quantity badge"> {{task.quantity}} </span>
                 <span class="spanText mx-3"> {{task.text}} </span>
               </div>
               <div class="options">
